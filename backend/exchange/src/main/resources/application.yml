@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: tradecore-exchange
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tradecore
+    username: tradecore
+    password: tradecore_dev_password
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
