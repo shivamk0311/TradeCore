@@ -3,7 +3,7 @@ spring:
     name: tradecore-exchange
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/tradecore
+    url: jdbc:postgresql://localhost:5433/tradecore
     username: tradecore
     password: tradecore_dev_password
 
